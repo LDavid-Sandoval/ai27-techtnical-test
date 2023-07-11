@@ -87,13 +87,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pokemon/charizard",
+							"raw": "{{baseUrl}}/pokemon/pikachu",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"pokemon",
-								"charizard"
+								"pikachu"
 							]
 						}
 					},
@@ -114,13 +114,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pokemon/1",
+							"raw": "{{baseUrl}}/pokemon/byId/25",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"pokemon",
-								"1"
+								"byId",
+								"25"
 							]
 						}
 					},
@@ -141,14 +142,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pokemon/name/charizard",
+							"raw": "{{baseUrl}}/pokemon/byName/pikachu",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"pokemon",
-								"name",
-								"charizard"
+								"byName",
+								"pikachu"
 							]
 						}
 					},
@@ -169,12 +170,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pokemons",
+							"raw": "{{baseUrl}}/pokemon/",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"pokemons"
+								"pokemon",
+								""
 							]
 						}
 					},
@@ -195,18 +197,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pokemons?type=electric",
+							"raw": "{{baseUrl}}/pokemon/byType/fire",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"pokemons"
-							],
-							"query": [
-								{
-									"key": "type",
-									"value": "electric"
-								}
+								"pokemon",
+								"byType",
+								"fire"
 							]
 						}
 					},

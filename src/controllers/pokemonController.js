@@ -5,13 +5,14 @@ async function getPokemon(req, res) {
   try {
     const { name } = req.params;
     const userID = req.user.id;
+
     const pokemon = await pokemonService.getPokemonByName(name, userID);
     logger.info("Data saved pokemon:", { userID, pokemon });
     res.json(pokemon);
   } catch (error) {
     logger.error("Failed to saved pokemon:", { error });
     console.error(error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Failed to get or saved pokemon" });
   }
 }
 

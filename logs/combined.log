@@ -18,3 +18,31 @@
 {"error":{},"level":"error","message":"Failed to register user:","timestamp":"2023-07-11T06:11:53.433Z"}
 {"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:11:53.441Z"}
 {"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:11:53.447Z"}
+{"email":"test1@test.com","level":"info","message":"data register:","timestamp":"2023-07-11T07:19:38.330Z","username":"test"}
+{"email":"test1@test.com","level":"info","message":"data register:","timestamp":"2023-07-11T07:21:36.566Z","username":"test"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:22:47.358Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:23:39.305Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:24:05.959Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:24:43.960Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:26:38.635Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:27:25.295Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:27:57.289Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:29:06.003Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T07:29:50.826Z"}
+{"email":"david@test.com","level":"info","message":"login user:","timestamp":"2023-07-11T07:30:30.555Z","username":"dmagia7"}
+{"level":"info","message":"Data saved pokemon:","pokemon":{"__v":0,"_id":"64ad076e50e2ac68fd804b2f","id":25,"moves":["mega-punch","pay-day","thunder-punch","slam"],"name":"pikachu","types":["electric"],"userID":"64aca0c80407a26f9ebd3dde"},"timestamp":"2023-07-11T07:40:30.935Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"id":"25","level":"info","message":"Data delete pokemon by ID:","timestamp":"2023-07-11T07:44:23.645Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"level":"info","message":"Data saved pokemon:","pokemon":{"__v":0,"_id":"64ad085f50e2ac68fd804b34","id":25,"moves":["mega-punch","pay-day","thunder-punch","slam"],"name":"pikachu","types":["electric"],"userID":"64aca0c80407a26f9ebd3dde"},"timestamp":"2023-07-11T07:44:31.469Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"level":"info","message":"Data saved pokemon:","pokemon":{"__v":0,"_id":"64ad086a50e2ac68fd804b37","id":132,"moves":["transform"],"name":"ditto","types":["normal"],"userID":"64aca0c80407a26f9ebd3dde"},"timestamp":"2023-07-11T07:44:42.138Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"level":"info","message":"Data saved pokemon:","pokemon":{"__v":0,"_id":"64ad087150e2ac68fd804b3a","id":6,"moves":["mega-punch","fire-punch","thunder-punch","scratch"],"name":"charizard","types":["fire","flying"],"userID":"64aca0c80407a26f9ebd3dde"},"timestamp":"2023-07-11T07:44:49.337Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:45:03.168Z"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:46:14.046Z"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:47:09.092Z"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:49:10.087Z"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:49:34.554Z"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:50:02.768Z"}
+{"error":{},"level":"error","message":"Failed to saved pokemon:","timestamp":"2023-07-11T07:50:15.070Z"}
+{"level":"info","message":"Data saved pokemon:","pokemon":{"__v":0,"_id":"64ad09be13bf4fe4763df527","id":51,"moves":["scratch","swords-dance","cut","sand-attack"],"name":"dugtrio","types":["ground"],"userID":"64aca0c80407a26f9ebd3dde"},"timestamp":"2023-07-11T07:50:22.779Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"level":"info","message":"Data delete pokemon by name:","name":"pikachu","timestamp":"2023-07-11T07:52:28.449Z","userID":"64aca0c80407a26f9ebd3dde"}
+{"level":"info","message":"Data delete pokemon by type:","timestamp":"2023-07-11T07:53:50.411Z","type":"fire","userID":"64aca0c80407a26f9ebd3dde"}
+{"level":"info","message":"Data list pokemon:","pokemon":[{"id":132,"moves":["transform"],"name":"ditto","types":["normal"]},{"id":51,"moves":["scratch","swords-dance","cut","sand-attack"],"name":"dugtrio","types":["ground"]}],"timestamp":"2023-07-11T07:54:32.733Z","userID":"64aca0c80407a26f9ebd3dde"}

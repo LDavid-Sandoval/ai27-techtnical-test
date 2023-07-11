@@ -5,14 +5,18 @@ const { authenticateUser } = require("../middlewares/authMiddleware");
 const router = express.Router();
 
 router.get("/:name", authenticateUser, pokemonController.getPokemon);
-router.delete("/:id", authenticateUser, pokemonController.deletePokemonById);
 router.delete(
-  "/delete/:name",
+  "/byId/:id",
+  authenticateUser,
+  pokemonController.deletePokemonById
+);
+router.delete(
+  "/byName/:name",
   authenticateUser,
   pokemonController.deletePokemonByName
 );
 router.delete(
-  "/delete-pokemons/:type",
+  "/byType/:type",
   authenticateUser,
   pokemonController.deletePokemonsByType
 );

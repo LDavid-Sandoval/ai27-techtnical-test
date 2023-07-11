@@ -14,7 +14,7 @@ async function getPokemonByName(name, userID) {
     await pokemon.save();
     return pokemon;
   } catch (err) {
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Nonexistent pokemon" });
   }
 }
 

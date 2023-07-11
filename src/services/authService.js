@@ -14,8 +14,7 @@ async function registerUser(username, email, password) {
     });
 
     await user.save();
-
-    return user;
+    return { message: "User created successfully" };
   } catch (err) {
     res.status(500).json({ error: "Internal server error" });
   }

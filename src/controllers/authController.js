@@ -21,8 +21,14 @@ async function loginUser(req, res) {
       usernameOrEmail,
       password
     );
-    logger.info("login user:", { username, email });
-    res.json({ token, user });
+    logger.info("login user:", { username: user.username, email: user.email });
+    res.json({
+      token,
+      user: {
+        username: user.username,
+        email: user.email,
+      },
+    });
   } catch (error) {
     logger.error("Failed to login user:", { error });
     console.error(error);
