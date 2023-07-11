@@ -2,13 +2,11 @@ const authService = require("../services/authService");
 const { registerUser, loginUser } = require("../controllers/authController");
 const logger = require("../middlewares/logger");
 
-// Mock del servicio authService
 jest.mock("../services/authService", () => ({
   registerUser: jest.fn(),
   loginUser: jest.fn(),
 }));
 
-// Mock del middleware logger
 jest.mock("../middlewares/logger", () => ({
   info: jest.fn(),
   error: jest.fn(),
@@ -32,7 +30,6 @@ describe("registerUser", () => {
   });
 
   it("should register the user and return the user data", async () => {
-    // Arrange
     const user = {
       _id: "user-id",
       username: "testuser",
@@ -40,10 +37,8 @@ describe("registerUser", () => {
     };
     authService.registerUser.mockResolvedValueOnce(user);
 
-    // Act
     await registerUser(req, res);
 
-    // Assert
     expect(authService.registerUser).toHaveBeenCalledWith(
       "testuser",
       "test@example.com",
@@ -57,15 +52,12 @@ describe("registerUser", () => {
   });
 
   it("should handle errors and return an error message", async () => {
-    // Arrange
     const error = new Error("Internal server error");
     authService.registerUser.mockRejectedValueOnce(error);
     const consoleSpy = jest.spyOn(console, "error");
 
-    // Act
     await registerUser(req, res);
 
-    // Assert
     expect(consoleSpy).toHaveBeenCalledWith(error);
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({ error: "Internal server error" });

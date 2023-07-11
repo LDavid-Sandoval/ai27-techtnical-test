@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../database/models/User");
-const logger = require("../middlewares/logger");
 
 async function registerUser(username, email, password) {
   try {
