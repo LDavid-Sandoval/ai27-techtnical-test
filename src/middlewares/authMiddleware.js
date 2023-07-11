@@ -13,8 +13,7 @@ async function authenticateUser(req, res, next) {
 
     req.user = user;
     next();
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
     res.status(500).json({ error: "Internal server error" });
   }
 }
