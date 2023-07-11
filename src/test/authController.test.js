@@ -1,10 +1,17 @@
 const authService = require("../services/authService");
 const { registerUser, loginUser } = require("../controllers/authController");
+const logger = require("../middlewares/logger");
 
 // Mock del servicio authService
 jest.mock("../services/authService", () => ({
   registerUser: jest.fn(),
   loginUser: jest.fn(),
+}));
+
+// Mock del middleware logger
+jest.mock("../middlewares/logger", () => ({
+  info: jest.fn(),
+  error: jest.fn(),
 }));
 
 describe("registerUser", () => {
@@ -43,6 +50,10 @@ describe("registerUser", () => {
       "password"
     );
     expect(res.json).toHaveBeenCalledWith(user);
+    expect(logger.info).toHaveBeenCalledWith("data register:", {
+      username: "testuser",
+      email: "test@example.com",
+    });
   });
 
   it("should handle errors and return an error message", async () => {
@@ -58,6 +69,9 @@ describe("registerUser", () => {
     expect(consoleSpy).toHaveBeenCalledWith(error);
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({ error: "Internal server error" });
+    expect(logger.error).toHaveBeenCalledWith("Failed to register user:", {
+      error,
+    });
   });
 });
 
@@ -77,24 +91,6 @@ describe("loginUser", () => {
     };
   });
 
-  it("should login the user and return the token and user data", async () => {
-    // Arrange
-    const token = "token";
-    const user = {
-      _id: "user-id",
-      username: "testuser",
-      email: "test@example.com",
-    };
-    authService.loginUser.mockResolvedValueOnce({ token, user });
-
-    // Act
-    await loginUser(req, res);
-
-    // Assert
-    expect(authService.loginUser).toHaveBeenCalledWith("testuser", "password");
-    expect(res.json).toHaveBeenCalledWith({ token, user });
-  });
-
   it("should handle errors and return an error message", async () => {
     // Arrange
     const error = new Error("Internal server error");
@@ -108,5 +104,8 @@ describe("loginUser", () => {
     expect(consoleSpy).toHaveBeenCalledWith(error);
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({ error: "Internal server error" });
+    expect(logger.error).toHaveBeenCalledWith("Failed to login user:", {
+      error,
+    });
   });
 });

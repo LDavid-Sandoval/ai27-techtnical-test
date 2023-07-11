@@ -1,0 +1,20 @@
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:09:54.392Z","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:09:54.399Z","username":"testuser"}
+{"error":{},"level":"error","message":"Failed to register user:","timestamp":"2023-07-11T06:09:54.400Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:09:54.408Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:09:54.413Z"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:10:45.081Z","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:10:45.093Z","username":"testuser"}
+{"error":{},"level":"error","message":"Failed to register user:","timestamp":"2023-07-11T06:10:45.094Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:10:45.102Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:10:45.108Z"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:11:31.529Z","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:11:31.541Z","username":"testuser"}
+{"error":{},"level":"error","message":"Failed to register user:","timestamp":"2023-07-11T06:11:31.542Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:11:31.551Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:11:31.557Z"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:11:53.419Z","username":"testuser"}
+{"email":"test@example.com","level":"info","message":"data register:","timestamp":"2023-07-11T06:11:53.432Z","username":"testuser"}
+{"error":{},"level":"error","message":"Failed to register user:","timestamp":"2023-07-11T06:11:53.433Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:11:53.441Z"}
+{"error":{},"level":"error","message":"Failed to login user:","timestamp":"2023-07-11T06:11:53.447Z"}
