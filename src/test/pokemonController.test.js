@@ -79,7 +79,9 @@ describe("getPokemon", () => {
       error,
     });
     expect(res.status).toHaveBeenCalledWith(500);
-    expect(res.json).toHaveBeenCalledWith({ error: "Internal server error" });
+    expect(res.json).toHaveBeenCalledWith({
+      error: "Failed to get or saved pokemon",
+    });
   });
 });
 

@@ -6,8 +6,6 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "build": "babel src --out-dir dist",
-    "serve": "node dist/app.js",
     "test": "jest"
   },
   "keywords": [],

@@ -52,7 +52,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"usernameOrEmail\": \"your_username_or_email\",\n  \"password\": \"your_password\"\n}"
+							"raw": "{\n  \"usernameOrEmail\": \"dmagia7\",\n  \"password\": \"Test1234\"\n}"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/auth/login",
@@ -87,13 +87,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/pokemon/pikachu",
+							"raw": "{{baseUrl}}/pokemon/dugtrio",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"pokemon",
-								"pikachu"
+								"dugtrio"
 							]
 						}
 					},
