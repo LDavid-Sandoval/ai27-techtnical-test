@@ -1,19 +1,24 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../database/models/User");
+const logger = require("../middlewares/logger");
 
 async function registerUser(username, email, password) {
-  const hashedPassword = await bcrypt.hash(password, 10);
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-  const user = new User({
-    username,
-    email,
-    password: hashedPassword,
-  });
+    const user = new User({
+      username,
+      email,
+      password: hashedPassword,
+    });
 
-  await user.save();
+    await user.save();
 
-  return user;
+    return user;
+  } catch (err) {
+    res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 async function loginUser(usernameOrEmail, password) {

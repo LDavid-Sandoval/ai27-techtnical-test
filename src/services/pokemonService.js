@@ -4,7 +4,6 @@ const Pokemon = require("../database/models/Pokemon");
 async function getPokemonByName(name, userID) {
   try {
     const response = await axios.get(`${process.env.URL_POKE_API}${name}`);
-
     const pokemon = new Pokemon({
       id: response.data.id,
       name: response.data.name,
@@ -12,12 +11,9 @@ async function getPokemonByName(name, userID) {
       types: response.data.types.map((type) => type.type.name),
       userID,
     });
-
     await pokemon.save();
-
     return pokemon;
   } catch (err) {
-    console.log(err);
     res.status(500).json({ error: "Internal server error" });
   }
 }
