@@ -70,10 +70,8 @@ describe("getPokemon", () => {
     pokemonService.getPokemonByName.mockRejectedValueOnce(error);
     const consoleSpy = jest.spyOn(console, "error");
 
-    // Act
     await getPokemon(req, res);
 
-    // Assert
     expect(consoleSpy).toHaveBeenCalledWith(error);
     expect(logger.error).toHaveBeenCalledWith("Failed to saved pokemon:", {
       error,
@@ -104,13 +102,10 @@ describe("deletePokemonById", () => {
   });
 
   it("should delete the Pokemon by ID, log the data, and return a success message", async () => {
-    // Arrange
     pokemonService.deletePokemonById.mockResolvedValueOnce();
 
-    // Act
     await deletePokemonById(req, res);
 
-    // Assert
     expect(pokemonService.deletePokemonById).toHaveBeenCalledWith(
       "pokemon-id",
       "user-id"
@@ -125,15 +120,12 @@ describe("deletePokemonById", () => {
   });
 
   it("should handle errors, log the error, and return an error message", async () => {
-    // Arrange
     const error = new Error("Internal server error");
     pokemonService.deletePokemonById.mockRejectedValueOnce(error);
     const consoleSpy = jest.spyOn(console, "error");
 
-    // Act
     await deletePokemonById(req, res);
 
-    // Assert
     expect(consoleSpy).toHaveBeenCalledWith(error);
     expect(logger.error).toHaveBeenCalledWith("Failed to Delete pokemon:", {
       error,
@@ -162,13 +154,10 @@ describe("deletePokemonByName", () => {
   });
 
   it("should delete the Pokemon by name, log the data, and return a success message", async () => {
-    // Arrange
     pokemonService.deletePokemonByName.mockResolvedValueOnce();
 
-    // Act
     await deletePokemonByName(req, res);
 
-    // Assert
     expect(pokemonService.deletePokemonByName).toHaveBeenCalledWith(
       "pikachu",
       "user-id"
@@ -183,15 +172,12 @@ describe("deletePokemonByName", () => {
   });
 
   it("should handle errors, log the error, and return an error message", async () => {
-    // Arrange
     const error = new Error("Internal server error");
     pokemonService.deletePokemonByName.mockRejectedValueOnce(error);
     const consoleSpy = jest.spyOn(console, "error");
 
-    // Act
     await deletePokemonByName(req, res);
 
-    // Assert
     expect(consoleSpy).toHaveBeenCalledWith(error);
     expect(logger.error).toHaveBeenCalledWith(
       "Failed to delete pokemon by name pokemon:",
@@ -221,13 +207,10 @@ describe("deletePokemonsByType", () => {
   });
 
   it("should delete the Pokemons by type, log the data, and return a success message", async () => {
-    // Arrange
     pokemonService.deletePokemonsByType.mockResolvedValueOnce();
 
-    // Act
     await deletePokemonsByType(req, res);
 
-    // Assert
     expect(pokemonService.deletePokemonsByType).toHaveBeenCalledWith(
       "electric",
       "user-id"

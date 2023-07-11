@@ -1,6 +1,6 @@
 # Technical test AI27
 
-This test is performed by David Sandoval, with github userhttps://github.com/LDavid-Sandoval
+This test is performed by David Sandoval, with github user https://github.com/LDavid-Sandoval
 
 ## Installation
 
