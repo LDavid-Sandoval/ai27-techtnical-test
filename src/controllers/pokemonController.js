@@ -69,10 +69,29 @@ async function getPokemonsList(req, res) {
   }
 }
 
+async function updateNameMovePokemon(req, res) {
+  try {
+    const userID = req.user.id;
+    const { idPokemon } = req.params;
+    const { newNameMove, oldNameMove } = req.body;
+    const pokemon = await pokemonService.updateMovePokemon(
+      oldNameMove,
+      newNameMove,
+      idPokemon,
+      userID
+    );
+    res.json(pokemon);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 module.exports = {
   getPokemon,
   deletePokemonById,
   deletePokemonByName,
   deletePokemonsByType,
   getPokemonsList,
+  updateNameMovePokemon,
 };

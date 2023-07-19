@@ -22,4 +22,10 @@ router.delete(
 );
 router.get("/", authenticateUser, pokemonController.getPokemonsList);
 
+router.post(
+  "/update-name/:idPokemon",
+  authenticateUser,
+  pokemonController.updateNameMovePokemon
+);
+
 module.exports = router;
