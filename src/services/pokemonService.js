@@ -45,10 +45,32 @@ async function deletePokemonsByType(type, userID) {
   return pokemons;
 }
 
+async function updateMovePokemon(oldNameMove, newNameMove, id, userID) {
+  const pokemonMoves = await Pokemon.findOne({ _id: id, userID }, { moves: 1 });
+  const { moves } = pokemonMoves;
+  const newMoves = [];
+  for (let i = 0; i < moves.length; i++) {
+    const element = moves[i];
+    if (oldNameMove === element) {
+      newMoves.push(newNameMove);
+    } else {
+      newMoves.push(element);
+    }
+  }
+  console.log(newMoves);
+  const pokemon = await Pokemon.findOneAndUpdate(
+    { _id: id, userID },
+    { moves: newMoves }
+  );
+  pokemon.moves = newMoves;
+  return pokemon;
+}
+
 module.exports = {
   getPokemonByName,
   deletePokemonById,
   deletePokemonByName,
   listUserPokemons,
   deletePokemonsByType,
+  updateMovePokemon,
 };
